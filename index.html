@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Der Lulu-Loop™ – Präzisions-Workflow für KI-Bilder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Der Lulu-Loop™ ist ein strukturierter Workflow, der KI-Bildgeneratoren präzise, reproduzierbare und kontrollierte Ergebnisse entlockt – in Deutsch und Englisch dokumentiert." />
+  <style>
+    :root {
+      --bg: #f5f5f5;
+      --fg: #222;
+      --accent: #333;
+      --card: #ffffff;
+      --border: #dddddd;
+      --muted: #666;
+      --max-width: 960px;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      padding: 24px;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    header img {
+      max-width: 260px;
+      height: auto;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 22px 0 10px;
+    }
+    h3 {
+      font-size: 1.15rem;
+      margin: 18px 0 8px;
+    }
+    p { margin-bottom: 9px; }
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #111;
+      color: #f5f5f5;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      margin-bottom: 8px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    ul, ol {
+      margin-left: 1.3rem;
+      margin-bottom: 9px;
+    }
+    code {
+      font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+      font-size: 0.9rem;
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #111;
+      color: #f5f5f5;
+      padding: 12px 14px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    .lang-toggle {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+    .lang-toggle a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 8px;
+      border-bottom: 1px solid transparent;
+    }
+    .lang-toggle a:hover {
+      border-bottom-color: rgba(0,0,0,0.3);
+    }
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      body { padding: 16px; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <!-- Lege dein Logo als logo.png ins Repo -->
+      <img src="logo.png" alt="Lulu-Loop Logo" />
+      <div class="badge">Lulu-Loop™ · Public Version 1.0</div>
+      <h1>Der Lulu-Loop™</h1>
+      <p class="tagline">Präziser Workflow für kontrollierte, reproduzierbare KI-Bilder – Deutsch &amp; Englisch.</p>
+    </header>
+
+    <div class="lang-toggle">
+      <strong>Sprache / Language:</strong>
+      <a href="#de">Deutsch</a> ·
+      <a href="#en">English</a>
+    </div>
+
+    <!-- ================= DEUTSCH ================= -->
+    <section id="de" class="card">
+      <h2>Was ist der Lulu-Loop?</h2>
+      <p>
+        Der <strong>Lulu-Loop™</strong> ist ein strukturierter, iterativer Workflow, der KI-Bildgeneratoren
+        (z.B. DALL·E, Midjourney, Stable Diffusion) dazu bringt, <strong>stabile, reproduzierbare und präzise</strong>
+        Ergebnisse zu liefern – statt bei jeder kleinen Änderung das gesamte Bild neu zu erfinden.
+      </p>
+      <p>
+        Er entstand aus einem realen High-Precision-Projekt mit vielen Iterationen, strengen Vorgaben
+        und einem am Ende zu 100&nbsp;% korrekten Zielbild.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Die fünf Grundprinzipien (DE)</h2>
+      <ol>
+        <li>
+          <strong>Nur eine Änderung pro Iteration</strong><br />
+          In jedem Schritt wird nur ein einziges, klar benanntes Detail verändert.
+          Alles andere bleibt unverändert.
+        </li>
+        <li>
+          <strong>Der „Lottotreffer“ wird eingefroren</strong><br />
+          Sobald ein Bild zu ca. 90–95&nbsp;% passt, gilt es als Referenzbild.
+          Alle weiteren Iterationen bauen exakt darauf auf.
+        </li>
+        <li>
+          <strong>Explizite Verbote sind entscheidend</strong><br />
+          Es wird klar formuliert, was die KI <em>nicht</em ändern darf
+          (Layout, Stil, neue Objekte, Perspektive usw.).
+        </li>
+        <li>
+          <strong>Chirurgische Präzision</strong><br />
+          Anweisungen sind konkret statt vage: lieber „ändere ausschließlich das Ü im Wort TÜTRA“,
+          statt „verbessere die Schrift“.
+        </li>
+        <li>
+          <strong>Die KI als Partner betrachten</strong><br />
+          Nach jeder Iteration wird analysiert, was bereits korrekt ist und was noch angepasst werden muss.
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Beispiel-Grundprompt (DE)</h2>
+      <pre><code>Ich möchte mit dir im Lulu-Loop™ arbeiten, einem präzisen Workflow
+für kontrollierte Bildgenerierung.
+
+In jeder Iteration darfst du nur EIN klar definiertes Detail am Bild
+verändern. Alles andere muss absolut identisch bleiben.
+
+Sobald wir eine Version haben, die zu etwa 90–95 % korrekt ist, gilt
+sie als „Lottotreffer“. Ab diesem Moment verwendest du dieses Bild als
+feste Vorlage und erzeugst nur noch exakte Duplikate, bei denen du
+ausschließlich die Details anpasst, die ich dir ausdrücklich freigebe.
+
+Verändere niemals Layout, Komposition, Stil, Perspektive, Farben oder
+Text, wenn ich das nicht explizit erlaube. Erfinde keine neuen Objekte.
+
+Arbeite so chirurgisch präzise wie möglich. Wenn etwas unklar ist,
+frage nach, bevor du das Bild neu interpretierst.</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Einsatzbereiche (DE)</h2>
+      <ul>
+        <li>Logos, Marken-Illustrationen, CI-Design</li>
+        <li>Cover, Poster, Karten, Layouts</li>
+        <li>Charakterdesign mit wiederkehrenden Figuren</li>
+        <li>Bilder mit Schrift (Titel, Sprüche, Plakate)</li>
+        <li>Komplexe Szenen, die über viele Versionen konsistent bleiben sollen</li>
+      </ul>
+      <p>Überall dort, wo <strong>Präzision wichtiger ist als Zufallskreativität</strong>.</p>
+    </section>
+
+    <!-- ================= ENGLISH ================= -->
+    <section id="en" class="card">
+      <h2>What is the Lulu-Loop?</h2>
+      <p>
+        The <strong>Lulu-Loop™</strong> is a structured, iterative workflow that makes AI image generators
+        (e.g. DALL·E, Midjourney, Stable Diffusion) produce <strong>consistent, repeatable and precise</strong>
+        results instead of randomly redesigning the entire image whenever you request a tiny change.
+      </p>
+      <p>
+        It was developed in a real high-precision use case with many iterations, strict constraints
+        and a final image that matched the target 100%.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>The Five Core Principles (EN)</h2>
+      <ol>
+        <li>
+          <strong>One change per iteration</strong><br />
+          Each generation may change exactly one clearly defined detail.
+          Everything else must remain identical.
+        </li>
+        <li>
+          <strong>Freeze the “Jackpot Image”</strong><br />
+          Once an image is ~90–95% correct, it becomes the reference.
+          All further iterations build strictly on that version.
+        </li>
+        <li>
+          <strong>Explicit restrictions matter</strong><br />
+          You clearly define what the AI is <em>not</em allowed to change
+          (layout, style, adding new objects, perspective, etc.).
+        </li>
+        <li>
+          <strong>Surgical precision</strong><br />
+          Instructions are exact rather than vague – e.g. “fix only the letter Ü
+          in TÜTRA” instead of “improve the font”.
+        </li>
+        <li>
+          <strong>Treat the AI as a collaborator</strong><br />
+          After each iteration you analyse together what is already correct
+          and what still needs adjustment.
+        </li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Sample Base Prompt (EN)</h2>
+      <pre><code>I want to work with you using the Lulu-Loop™, a precision workflow
+for controlled image creation.
+
+In each iteration, you may change only ONE clearly defined detail.
+Everything else must remain exactly the same.
+
+Once we reach a version that is about 90–95% correct, it becomes the
+“Jackpot Image.” From then on, you must use it as a fixed reference and
+produce identical duplicates except for the one detail I explicitly
+authorize you to adjust.
+
+Never alter layout, composition, style, perspective, colors, or text
+unless I explicitly allow it. Do not invent new objects.
+
+Follow restrictions literally and work as surgically precise as
+possible. If anything is unclear, ask before reinterpreting the image.</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Use Cases (EN)</h2>
+      <ul>
+        <li>Logos and branding</li>
+        <li>Posters, covers and layouts</li>
+        <li>Character design with consistent appearance</li>
+        <li>Illustrations that include text</li>
+        <li>Complex scenes that must stay coherent across many versions</li>
+      </ul>
+      <p>In short: whenever <strong>precision matters more than random creativity</strong>.</p>
+    </section>
+
+    <!-- ================= LICENSE / FOOTER ================= -->
+    <section class="card">
+      <h2>License &amp; Credits</h2>
+      <p>
+        The Lulu-Loop™ public documentation is released under
+        <strong>Creative Commons Attribution 4.0 (CC BY 4.0)</strong>.
+        You may share and adapt it as long as you credit the origin:
+      </p>
+      <p>
+        <code>“Based on the Lulu-Loop™ workflow by Lulu.”</code>
+      </p>
+      <p>
+        Full license text: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      </p>
+    </section>
+
+    <div class="footer">
+      &copy; 2025 Lulu · The Lulu-Loop™ · Public Version 1.0
+    </div>
+  </div>
+</body>
+</html>
